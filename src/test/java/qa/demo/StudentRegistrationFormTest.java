@@ -1,13 +1,10 @@
 package qa.demo;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selectors;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -33,7 +30,6 @@ class StudentRegistrationFormTest {
 
     @Test
     void registrationFormTest() {
-
         open("https://demoqa.com/automation-practice-form");
 
         $("#firstName").setValue(firstName);
